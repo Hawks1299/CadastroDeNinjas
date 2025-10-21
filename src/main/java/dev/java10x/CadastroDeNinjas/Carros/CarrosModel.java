@@ -26,5 +26,5 @@ public class CarrosModel {
     // @OneToMany um carro pode ter mais de uma pessoa
     @OneToMany(mappedBy = "carros")
     private List<NinjaModel> ninjas;
-    
+
 }

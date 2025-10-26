@@ -1,5 +1,6 @@
 package dev.java10x.CadastroDeNinjas.Carros;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import dev.java10x.CadastroDeNinjas.Ninjas.NinjaModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -25,6 +26,7 @@ public class CarrosModel {
 
     // @OneToMany um carro pode ter mais de uma pessoa
     @OneToMany(mappedBy = "carros")
+    @JsonIgnore
     private List<NinjaModel> ninjas;
 
 }
